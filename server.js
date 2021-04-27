@@ -4,12 +4,12 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require("cors");
 
-const io = require("socket.io")(server, {
-	cors: {
-		origin: "*",
-		methods: [ "GET", "POST" ,"PUT","DELETE"]
-	}
-});
+// const io = require("socket.io")(server, {
+// 	cors: {
+// 		origin: "*",
+// 		methods: [ "GET", "POST" ,"PUT","DELETE"]
+// 	}
+// });
 
 app.use(cors());
 
