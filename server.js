@@ -2,7 +2,16 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const path = require('path');
+const cors = require("cors");
 
+const io = require("socket.io")(server, {
+	cors: {
+		origin: "*",
+		methods: [ "GET", "POST" ,"PUT","DELETE"]
+	}
+});
+
+app.use(cors());
 
 const items = require('./routes/api/items');
 
